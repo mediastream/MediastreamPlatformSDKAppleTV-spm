@@ -49,8 +49,8 @@ let package = Package(
     // hand is how a checksum mismatch reaches a consumer.
     .binaryTarget(
       name: "MediastreamPlatformSDKAppleTV",
-      url: "https://s3.amazonaws.com/mediastream-platform-sdk-ios/appleTV-sdk/dev/0.0.0/MediastreamPlatformSDKAppleTVxC.zip",
-      checksum: "0000000000000000000000000000000000000000000000000000000000000000"
+      url: "https://s3.amazonaws.com/mediastream-platform-sdk-ios/appleTV-sdk/2.1.0/MediastreamPlatformSDKAppleTVxC.zip",
+      checksum: "433b25f92ebe08186081169b6c92521c235a4316e714e278bb2ac5d096d13e2e"
     ),
     .target(
       name: "MediastreamSDKDependencies",
