@@ -62,13 +62,15 @@ Two things get better on the way out, both of which the pod imposed on your app:
 |---|---|---|
 | GoogleInteractiveMediaAdsTvOS | `4.16.0` up to but not including `5.0.0` | The lower bound is not a preference: Google renamed the product in 4.15.1, and 4.16.0 is where its own floor moved to tvOS 15 |
 | YouboraLib | `6.7.x` from `6.7.23` | Distributed by NPAW from **bitbucket.org** |
+| itg-apple-sdk | `2.7.x` from `2.7.36` | Powers the ITG (In The Game) overlay: products `Inthegametv` and `ITGPlayerViewController`. Prebuilt binaries in **github.com/Inthegamesdk**, built with Swift 6.3.3; verified with Xcode 26.3, not with older versions |
 
 `AdSupport` and `AppTrackingTransparency` are linked for you. If your app shows the App
 Tracking Transparency prompt, you still call `ATTrackingManager` yourself — the SDK links
 the framework but does not request authorization on your behalf.
 
-**If your build environment restricts outbound git access, allow `bitbucket.org`.** NPAW
-distributes YouboraLib from there, and it is a transitive dependency you cannot avoid.
+**If your build environment restricts outbound git access, allow `bitbucket.org` and
+`github.com/Inthegamesdk`.** NPAW distributes YouboraLib from Bitbucket and ITG keeps its
+binaries in its GitHub repository; both are transitive dependencies you cannot avoid.
 
 **If you filter outbound traffic, allow `a-fds.youborafds01.com`.** Youbora 6.7 moved its
 configuration endpoint there from `nqs.nice264.com`.
@@ -129,9 +131,10 @@ published.
 
 Versions each release was **built against**, and the ranges a consumer may resolve.
 
-| SDK | tvOS | IMA tvOS (built / allowed) | YouboraLib (built / allowed) |
-|---|---|---|---|
-| 2.1.0 | 15.0+ | 4.16.0 / `4.16.0 ..< 5.0.0` | 6.7.23 / `6.7.x` |
+| SDK | tvOS | IMA tvOS (built / allowed) | YouboraLib (built / allowed) | itg-apple-sdk (built / allowed) |
+|---|---|---|---|---|
+| 2.1.0 | 15.0+ | 4.16.0 / `4.16.0 ..< 5.0.0` | 6.7.23 / `6.7.x` | — |
+| 2.15.0 | 15.0+ | 4.16.0 / `4.16.0 ..< 5.0.0` | 6.7.23 / `6.7.x` | 2.7.36 / `2.7.x` |
 
 Anything outside these ranges is untested. A minor bump of a dependency is validated and
 shipped in an SDK release rather than flowing through automatically, because that is where

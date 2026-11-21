@@ -6,7 +6,7 @@ let package = Package(
   platforms: [.tvOS(.v15)],
   products: [
     // The product carries the binary AND the wrapper, so consumers get the module plus
-    // IMA / Youbora / AdSupport / AppTrackingTransparency in one dependency.
+    // IMA / Youbora / ITG / AdSupport / AppTrackingTransparency in one dependency.
     .library(
       name: "MediastreamPlatformSDKAppleTV",
       targets: ["MediastreamPlatformSDKAppleTV", "MediastreamSDKDependencies"]
@@ -41,6 +41,10 @@ let package = Package(
     .package(
       url: "https://bitbucket.org/npaw/lib-plugin-spm-ios.git",
       .upToNextMinor(from: "6.7.23")
+    ),
+    .package(
+      url: "https://github.com/Inthegamesdk/itg-apple-sdk.git",
+      .upToNextMinor(from: "2.7.36")
     )
   ],
   targets: [
@@ -60,7 +64,9 @@ let package = Package(
           name: "GoogleInteractiveMediaAdsTvOS",
           package: "swift-package-manager-google-interactive-media-ads-tvos"
         ),
-        .product(name: "YouboraLib", package: "lib-plugin-spm-ios")
+        .product(name: "YouboraLib", package: "lib-plugin-spm-ios"),
+        .product(name: "Inthegametv", package: "itg-apple-sdk"),
+        .product(name: "ITGPlayerViewController", package: "itg-apple-sdk")
       ],
       path: "Sources/MediastreamSDKDependencies",
       // Mirrors s.frameworks = 'AdSupport', 'AppTrackingTransparency' from the podspec.

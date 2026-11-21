@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "itg-apple-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Inthegamesdk/itg-apple-sdk.git",
+      "state" : {
+        "revision" : "acffc54d416abc126eba74968f854cc1f75dacaf",
+        "version" : "2.7.36"
+      }
+    },
+    {
+      "identity" : "lib-plugin-spm-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://bitbucket.org/npaw/lib-plugin-spm-ios.git",
+      "state" : {
+        "revision" : "c017473d8ce90f8509633712fdaf1b5eac30c7c1",
+        "version" : "6.7.23"
+      }
+    },
+    {
+      "identity" : "swift-package-manager-google-interactive-media-ads-tvos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-tvos.git",
+      "state" : {
+        "revision" : "8d029b6efbb2ec8681575b5f544f605daf1d98b2",
+        "version" : "4.18.1"
+      }
+    }
+  ],
+  "version" : 2
+}
