@@ -131,9 +131,10 @@ published.
 
 Versions each release was **built against**, and the ranges a consumer may resolve.
 
-| SDK | tvOS | IMA tvOS (built / allowed) | YouboraLib (built / allowed) |
-|---|---|---|---|
-| 2.1.0 | 15.0+ | 4.16.0 / `4.16.0 ..< 5.0.0` | 6.7.23 / `6.7.x` |
+| SDK | tvOS | IMA tvOS (built / allowed) | YouboraLib (built / allowed) | itg-apple-sdk (built / allowed) |
+|---|---|---|---|---|
+| 2.1.0 | 15.0+ | 4.16.0 / `4.16.0 ..< 5.0.0` | 6.7.23 / `6.7.x` | — |
+| 2.15.0 | 15.0+ | 4.16.0 / `4.16.0 ..< 5.0.0` | 6.7.23 / `6.7.x` | 2.7.36 / `2.7.x` |
 
 Anything outside these ranges is untested. A minor bump of a dependency is validated and
 shipped in an SDK release rather than flowing through automatically, because that is where
